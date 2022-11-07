@@ -1,8 +1,11 @@
-
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+
+/**
+ * PointPlot is part of the DecoratorPlot. It adds features to BasePlot.
+ */
 
 public class PointPlot extends DecoratorPlot {
     JPanel panel;

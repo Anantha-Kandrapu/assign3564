@@ -1,11 +1,13 @@
-
 import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.FlowLayout;
-// import java.awt.Color;
 import javax.swing.*;
+
+/**
+ * The PlotPanel class acts as the observer and observes DataSource.
+ */
 
 public class PlotPanel extends JPanel implements Observer {
     protected int points[];
@@ -14,7 +16,6 @@ public class PlotPanel extends JPanel implements Observer {
     JPanel jPanel;
 
     private PlotPanel() {
-
     }
 
     public static PlotPanel getPlotPanel() {
@@ -33,12 +34,8 @@ public class PlotPanel extends JPanel implements Observer {
     public JPanel drawPanels() {
         jPanel = new JPanel(new FlowLayout(FlowLayout.LEADING, 10, 10));
         jPanel.setBorder(new TitledBorder(new LineBorder(Color.BLACK), "Plot Panel"));
-        // Drawable plot = new BarPlot(new BarPlot(new BarPlot(new BarPlot(new
-        // BasePlot()))));
-        // Drawable plot = new BasePlot();
         Drawable plot = new PointPlot(new BarPlot(new BasePlot()));
         jPanel = plot.plotPoints(jPanel);
         return jPanel;
     }
-
 }

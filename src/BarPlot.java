@@ -3,6 +3,11 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
+/**
+ * This class participates in the Decorator pattern. It takes the BasePlot and adds
+ * features to it to make it a BarPlot.
+ */
+
 public class BarPlot extends DecoratorPlot {
     JPanel panel;
     Drawable s;
@@ -20,6 +25,8 @@ public class BarPlot extends DecoratorPlot {
         return finalPanel;
     }
 
+    // This method draws the rectangle on the GUI and fills the colour to make it visible.
+    
     @Override
     public void paint(Graphics g) {
         int height = 500;

@@ -1,13 +1,14 @@
+/**
+ * This class implements the Singleton pattern. It has the private constructor.
+ */
 
 public class Evaluator {
-
 	private static Evaluator _instance;
 
 	private Evaluator() {
 	};
 
 	public static Evaluator getEvaluator() {
-
 		if (_instance == null)
 			_instance = new Evaluator();
 		return _instance;
@@ -22,5 +23,4 @@ public class Evaluator {
 		}
 		return sum / data.length;
 	}
-
 }

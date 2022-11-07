@@ -1,6 +1,4 @@
-
 public abstract class Observable {
-
 	private Observer obs1;
 
 	public Observer getObs1() {
@@ -13,4 +11,3 @@ public abstract class Observable {
 	
 	public abstract void notifying();
 }
-

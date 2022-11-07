@@ -3,22 +3,26 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
-public class BasePlot extends JPanel implements Drawable {
+/**
+ * This class is a part of the Decorator pattern. It is the Base class to which features
+ * are added.
+ */
 
+public class BasePlot extends JPanel implements Drawable {
     JPanel panel;
     int points[];
 
     public BasePlot() {
-
     }
 
     @Override
     public JPanel plotPoints(JPanel finalPanel) {
-        System.out.println("Base Plot");
         drawPoints();
         finalPanel.add(panel);
         return finalPanel;
     }
+
+    // This method draws the rectangle on the GUI and fills the colour to make it visible.
 
     @Override
     public void paint(Graphics g) {
@@ -36,7 +40,6 @@ public class BasePlot extends JPanel implements Drawable {
     }
 
     private void drawPoints() {
-        System.out.println("IM here in base class");
         panel = new BasePlot();
         panel.setPreferredSize(new Dimension(500, 500));
         panel.setBackground(Color.RED);
